@@ -9,7 +9,5 @@ def allblogs(request):
     return render(request, 'blog/allblogs.html', {'allblogs' : allblogs})
     
 def detail(request, blog_id):
-    print("Hello detail")
     detailblog = get_object_or_404(Blog, pk=blog_id)
-    print("Hello"+detailblog.title)
     return render(request, 'blog/detail.html', {'blog':detailblog})
